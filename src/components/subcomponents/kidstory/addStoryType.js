@@ -3,10 +3,8 @@ import {Paper, Grid,TextField, MenuItem, Button,Typography, Divider} from "@mate
 
 
 function AddStoryType(props) {
- const {course , setCourse} = props.course
-  const handleChange = (event) => {
-    setCourse(event.target.value);
-  };
+  const {handleChange} = props
+ 
     
     return (
       <Grid container >
@@ -15,19 +13,14 @@ function AddStoryType(props) {
           <Typography variant="h4" nowrap className="mb-2" align="center">Add Kid Story Type</Typography>
           <Divider /><br />
            <TextField
-           id="select-course"
+           id="story-type"
            variant="outlined"
-           select 
            fullWidth
-           label="Courses"
-           value={course}
+           type="text"
+           label="Story Type"
            onChange={handleChange}
-           className="mb-5 mt-5">
-             <MenuItem value="English">English</MenuItem>
-             <MenuItem value="Math">Math</MenuItem>
-             <MenuItem value="Urdu">Urdu</MenuItem>
-             <MenuItem value="Computer">Computer</MenuItem>
-           </TextField>
+           className="mb-5 mt-5" />
+           
           <Button className="bgColor text-light" variant="contained">
             Next
           </Button>

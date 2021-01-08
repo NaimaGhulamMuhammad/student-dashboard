@@ -1,5 +1,5 @@
 import React from 'react'
-import {TableRow, FormGroup, Grid, TextField, Paper, FormLabel, Button} from "@material-ui/core"
+import {Typography, FormGroup, Grid, TextField, Paper, FormLabel, Button, Divider} from "@material-ui/core"
 
 
 function AddComplain(props) {
@@ -10,6 +10,7 @@ function AddComplain(props) {
        
         <Grid item md={2}/>
         <Grid item component={Paper} md={8} className="p-5">
+            <Typography variant="h4" align="center">Add Complain</Typography><Divider variant="middle" className="m-4"/>
             <form onSubmit={(d) => handleSubmit(d)}>
                 <FormGroup  >
                     <FormLabel>Message</FormLabel>
@@ -17,7 +18,7 @@ function AddComplain(props) {
                     {/* <FormControl.Feedback type="invalid">This field is required</Form.Control.Feedback> */}
                 </FormGroup>
                 
-                <Button type="submit" className="bgColor mt-4">Submit complains</Button>
+                <Button type="submit" className="bgColor text-light mt-4">Submit complain</Button>
             </form>
             </Grid>
             <Grid item md={2}/>

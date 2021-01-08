@@ -12,7 +12,7 @@ function Assignment(props) {
     return (
      
         <TableContainer component={Card}>
-            <Typography variant="h6" gutterBottom align="left" className=" pl-4" color="primary">Complains</Typography>
+            <Typography variant="h6" gutterBottom align="left" className=" pl-4" color="primary">Assignments</Typography>
             <Divider />
             <Table >
                 <TableHead >

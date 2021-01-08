@@ -1,5 +1,4 @@
 import React from 'react'
-// import {Button,Collapse, Accordion, Row, Dropdown, ListGroup} from "react-bootstrap"
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -13,13 +12,7 @@ import CloseIcon from "@material-ui/icons/Close"
 import DashboardIcon from '@material-ui/icons/Dashboard';
 
 import { makeStyles } from '@material-ui/core/styles';
-import {Paper, IconButton, Typography, Divider} from  "@material-ui/core"
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Collapse from '@material-ui/core/Collapse';
-
+import {Paper, IconButton, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Collapse} from  "@material-ui/core"
 import clsx from 'clsx';
 import { withRouter} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -69,7 +62,7 @@ function SideBar(props) {
         {
             name: "Lecture",
             icon: <SubjectIcon />,
-            onClick: ''
+            onClick: ()=>history.push('/lectures')
         },
         {
             name: "Complains",
@@ -95,8 +88,7 @@ function SideBar(props) {
                         subItemText: "Kid Story Type",
                         subItemOnClick:()=>history.push('/kidStoryType')
                     },
-                ],
-            onClick: ''
+                ]
         },
         {
             name: "Articles",

@@ -19,10 +19,8 @@ function SelectCourse(props) {
            value={course}
            onChange={handleChange}
            className="mb-5 mt-5">
-             <MenuItem value="English">English</MenuItem>
-             <MenuItem value="Math">Math</MenuItem>
-             <MenuItem value="Urdu">Urdu</MenuItem>
-             <MenuItem value="Computer">Computer</MenuItem>
+             <MenuItem >English</MenuItem>
+             <MenuItem ></MenuItem>
            </TextField>
           <Button className="bgColor text-light" variant="contained">
             Next

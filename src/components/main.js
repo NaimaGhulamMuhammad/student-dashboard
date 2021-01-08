@@ -14,6 +14,8 @@ import UploadedTest from "./subcomponents/test/viewUploadedTest"
 import Announcement from "./subcomponents/announcment"
 import Article from "./subcomponents/articles/article"
 import AddArticleType from "./subcomponents/articles/addArticleType"
+import Discussion from  "./subcomponents/discussion"
+import Lecture from "./subcomponents/lecture"
 
 import {
     Switch,
@@ -42,13 +44,13 @@ function Main() {
 
     return (
         <>
-        {course !== null?
+        {course !== ''?
                 <Switch>
                     <Route  exact from="/" render={props => <DashboardHome {...props} />}/>
-                    <Route  exact path='/viewAssignment' render={props => <SelectCourse {...props} course={course} handleChange={selectCourseHandle}/>}/>
+                    <Route  exact path='/viewAssignment' render={props => <Assignment {...props} course={course} handleChange={selectCourseHandle}/>}/>
                     <Route  exact path="/addComplain" render={props => <AddComplain {...props} handleSubmit={submitComaplain} handleChange={handleComplainChange}/>}/>
                     <Route  exact path="/viewComplain" render={props => <ViewComplain {...props} complain={message}/>}/>
-                    <Route  exact path="/discussion" render={props => <ViewComplain {...props}/>}/>
+                    <Route  exact path="/discussion" render={props => <Discussion {...props}/>}/>
                     <Route  exact path="/viewTest" render={props => <Test {...props}/>}/>
                     <Route  exact path="/viewUploadedTest" render={props => <UploadedTest {...props}/>}/>
                     <Route  exact path="/kidstory" render={props => <KidStory {...props}/>} type={storyType}/>
@@ -57,6 +59,7 @@ function Main() {
                     <Route  exact path="/articlesType" render={props => <AddArticleType {...props}/>}/>
                     <Route  exact path="/announcement" render={props => <SelectCourse {...props}/>}/>
                     <Route  exact path="/Feedback" render={props => <FeedBack {...props}/>}/>
+                    <Route  exact path="/lectures" render={props => <Lecture {...props}/>}/>
                 </Switch>               
     :
                 <Switch>
