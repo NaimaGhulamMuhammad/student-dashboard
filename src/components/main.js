@@ -53,11 +53,11 @@ function Main() {
                     <Route  exact path="/discussion" render={props => <Discussion {...props}/>}/>
                     <Route  exact path="/viewTest" render={props => <Test {...props}/>}/>
                     <Route  exact path="/viewUploadedTest" render={props => <UploadedTest {...props}/>}/>
-                    <Route  exact path="/kidstory" render={props => <KidStory {...props}/>} type={storyType}/>
+                    <Route  exact path="/kidstory" render={props => <KidStory {...props} type={storyType}/>} />
                     <Route  exact path="/kidStoryType" render={props => <AddStoryType {...props} handleChange={handleAddType}/>}/>
                     <Route  exact path="/articles" render={props => <Article {...props}/>}/>
                     <Route  exact path="/articlesType" render={props => <AddArticleType {...props}/>}/>
-                    <Route  exact path="/announcement" render={props => <SelectCourse {...props}/>}/>
+                    <Route  exact path="/announcement" render={props => <Announcement {...props}/>}/>
                     <Route  exact path="/Feedback" render={props => <FeedBack {...props}/>}/>
                     <Route  exact path="/lectures" render={props => <Lecture {...props}/>}/>
                 </Switch>               
@@ -69,12 +69,14 @@ function Main() {
                     <Route  exact path="/viewComplain" render={props => <ViewComplain {...props} complain={message}/>}/>
                     <Route  exact path="/discussion" render={props => <SelectCourse {...props} course={course} handleChange={selectCourseHandle}/>}/>
                     <Route  exact path="/viewTest" render={props => <SelectCourse {...props} course={course} handleChange={selectCourseHandle}/>}/>
-                    <Route  exact path="/kidstory" render={props => <SelectCourse {...props}/>}/>
-                    <Route  exact path="/kidStoryType" render={props => <SelectCourse {...props}/>}/>
-                    <Route  exact path="/articles" render={props => <SelectCourse {...props}/>}/>
-                    <Route  exact path="/articlesType" render={props => <SelectCourse {...props}/>}/>
+                    <Route  exact path="/viewUploadedTest" render={props => <SelectCourse {...props} course={course} handleChange={selectCourseHandle}/>}/>
+                    <Route  exact path="/kidstory" render={props => <KidStory {...props} type={storyType}/>}/>
+                    <Route  exact path="/kidStoryType" render={props => <AddStoryType {...props} handleChange={handleAddType}/>}/>
+                    <Route  exact path="/articles" render={props => <Article {...props}/>}/>
+                    <Route  exact path="/articlesType" render={props => <AddArticleType {...props}/>}/>
                     <Route  exact path="/announcement" render={props => <Announcement {...props}/>}/>
                     <Route  exact path="/Feedback" render={props => <FeedBack {...props}/>}/>
+                    <Route  exact path="/lectures" render={props => <SelectCourse {...props} course={course} handleChange={selectCourseHandle}/>}/>
                 </Switch>
         }
         </>

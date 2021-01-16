@@ -3,23 +3,19 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
-import LiveHelpIcon from '@material-ui/icons/LiveHelp';
 import AnnouncementIcon from '@material-ui/icons/Announcement';
 import TimelineIcon from '@material-ui/icons/Timeline';
 import SubjectIcon from '@material-ui/icons/Subject';
-import MenuIcon from "@material-ui/icons/Menu"
 import CloseIcon from "@material-ui/icons/Close"
 import DashboardIcon from '@material-ui/icons/Dashboard';
 
-import { makeStyles } from '@material-ui/core/styles';
-import {Paper, IconButton, Typography, Divider, List, ListItem, ListItemIcon, ListItemText, Collapse} from  "@material-ui/core"
-import clsx from 'clsx';
+import {IconButton, Divider, List, ListItem, ListItemIcon, ListItemText, Collapse} from  "@material-ui/core"
 import { withRouter} from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo from "../images/logo.png"
 
 function SideBar(props) {
-    const open = props.open
+    const {open} = props
     const {history} = props
     const [item, setItem] = React.useState({})
     const handleOpen = (name) => {
@@ -133,7 +129,7 @@ function SideBar(props) {
                             <ListItemText primary={name}/>
                             {item[name] ? <ExpandMoreIcon /> : <ChevronRightIcon/>}
                         </ListItem>
-                        <Collapse in={item[name]} unmountOnExit component="li">
+                        <Collapse in={item[name]} unmountOnExit component="li" unmountOnExit>
                             <List className={`bg-white text-dark m-3 shadow rounded ${open? '': 'd-none'}`} disablePadding>
                                 {subMenu.map((subItem) => {
                                     const {subItemText, subItemOnClick} = subItem
