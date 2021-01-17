@@ -3,6 +3,15 @@ import {Grid, Typography} from "@material-ui/core"
 import {withRouter, Link} from "react-router-dom"
 import Widget from "./Widget"
 
+// images
+import assignment from "../images/assignment.png"
+import complains from "../images/complains.png"
+import test from "../images/test.png"
+import dashboard from "../images/dashboard.png"
+import discussion from "../images/discussion.png"
+import notes from "../images/notes.png"
+import feedback from "../images/feedback.png"
+
 
 function DashboardHome(props) {
     console.log(props)
@@ -16,28 +25,28 @@ function DashboardHome(props) {
 
             <Grid item md={3}  xsm={8} sm={6} >
                 
-            <Widget text="Assignment" link={()=>history.push('/viewAssignment')}/>
+            <Widget text="Assignment" image={assignment} link={()=>history.push('/viewAssignment')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="View Online Test" link={()=>history.push('/viewTest')}/>
+            <Widget text="View Online Test" image={dashboard} link={()=>history.push('/viewTest')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="View Uploaded test" link={()=>history.push('/viewTest')}/>
+            <Widget text="View Uploaded test" image={test} link={()=>history.push('/viewUploadedTest')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="Notes"/>
+            <Widget text="Notes" image={notes} link={()=>history.push('/lectures')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="Add Discussion" link={()=>history.push('/viewTest')}/>
+            <Widget text="Add Discussion" image={discussion} link={()=>history.push('/discussion')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="Lecture" link={()=>history.push('/viewTest')}/>
+            <Widget text="Lecture" image={test} link={()=>history.push('/lectures')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="Add Complain" link={()=>history.push('/viewTest')}/>
+            <Widget text="Add Complain" image={complains} link={()=>history.push('/addComplain')}/>
             </Grid >
             <Grid item md={3}  xsm={8} sm={6}>
-            <Widget text="FeedBack" link={()=>history.push('/Feedback')}/>
+            <Widget text="FeedBack" image={feedback} link={()=>history.push('/Feedback')}/>
             </Grid >
             
                 </Grid>
